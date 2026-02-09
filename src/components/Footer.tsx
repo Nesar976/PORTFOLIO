@@ -22,7 +22,7 @@ const Footer = () => {
                 transition={{ delay: 0.2 }}
             >
                 <a
-                    href="https://github.com/nesarkavri"
+                    href="https://github.com/Nesar976"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:text-teal transition-colors"

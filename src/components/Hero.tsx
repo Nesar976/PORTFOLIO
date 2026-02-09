@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Github, ArrowRight } from 'lucide-react';
 
-const Hero = () => {
+const Hero = ({ onOpenContact }: { onOpenContact: () => void }) => {
     return (
         <section id="hero" className="min-h-screen flex items-center justify-center px-6 sm:px-12 pt-20">
             <div className="max-w-5xl w-full">
@@ -25,7 +25,7 @@ const Hero = () => {
                     </motion.h1>
 
                     <motion.a
-                        href="https://github.com/nesarkavri"
+                        href="https://github.com/Nesar976"
                         target="_blank"
                         rel="noreferrer"
                         initial={{ opacity: 0, scale: 0 }}
@@ -66,8 +66,8 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 1.0 }}
                 >
-                    <a
-                        href="#contact"
+                    <button
+                        onClick={onOpenContact}
                         className="group inline-flex items-center gap-2 border border-teal text-teal px-8 py-4 rounded font-mono text-sm hover:bg-teal/10 transition-colors"
                     >
                         Get In Touch
@@ -77,7 +77,7 @@ const Hero = () => {
                         >
                             <ArrowRight size={18} />
                         </motion.span>
-                    </a>
+                    </button>
                 </motion.div>
             </div>
         </section>

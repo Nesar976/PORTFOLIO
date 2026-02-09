@@ -35,13 +35,15 @@ const Navbar = ({ onOpenContact }: { onOpenContact: () => void }) => {
                         transition={{ duration: 0.5 }}
                         className="cursor-pointer group relative z-50"
                         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                        whileHover={{ rotate: 180 }}
+                        whileHover={{ scale: 1.1, filter: "drop-shadow(0 0 8px rgba(100, 255, 218, 0.5))" }}
+                        whileTap={{ scale: 0.95 }}
                     >
-                        {/* Futuristic NK Logo */}
+                        {/* Minimal N Monogram */}
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="40" height="40" rx="8" className="fill-teal/10 stroke-teal stroke-2 group-hover:fill-teal/20 transition-all" />
-                            <path d="M12 28V12L22 28V12" className="stroke-teal stroke-2 stroke-linecap-round stroke-linejoin-round" />
-                            <path d="M28 28L22 20" className="stroke-teal stroke-2 stroke-linecap-round stroke-linejoin-round" />
+                            <path
+                                d="M12 32V8L28 32V8"
+                                className="stroke-teal stroke-[3] stroke-linecap-square stroke-linejoin-miter"
+                            />
                         </svg>
                     </motion.div>
 
